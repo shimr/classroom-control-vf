@@ -50,4 +50,6 @@ node default {
   unless => "/bin/test `grep 'Welcome to ' /etc/motd`",
   }
   
+  include users
+  
 }
