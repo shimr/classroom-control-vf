@@ -11,7 +11,7 @@ class nginx {
   file { '/etc/nginx/nginx.conf':
   ensure => file,
 #  require => Package['nginx'],
-  source => 'puppet:///modules/nginx/default.conf',
+  source => 'puppet:///modules/nginx/nginx.conf',
   }
   
   file { '/etc/nginx/nginx.d/default.conf':
@@ -22,7 +22,7 @@ class nginx {
   
   file { '/var/www/index.html':
   ensure => file,
-  source => 'puppet:///modules/nginx/index.html,
+  source => 'puppet:///modules/nginx/index.html',
   }
   
   service { 'nginx':
