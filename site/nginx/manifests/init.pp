@@ -14,7 +14,7 @@ class nginx {
   source => 'puppet:///modules/nginx/nginx.conf',
   }
   
-  file { '/etc/nginx/nginx.d/default.conf':
+  file { '/etc/nginx/conf.d/default.conf':
   ensure => file,
 #  require => Package['nginx'],
   source => 'puppet:///modules/nginx/default.conf',
