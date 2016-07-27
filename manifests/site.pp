@@ -47,7 +47,7 @@ node default {
   exec { 'motd 7.2':
   command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
   path => '/usr/local/bin',
-  onlyif => '/bin/test ! `grep "Welcome to ${::fqdn}!"`' /etc/motd,
+  unless => '/bin/test `grep "Welcome to ${::fqdn}!"`' /etc/motd,
   }
   
 }
