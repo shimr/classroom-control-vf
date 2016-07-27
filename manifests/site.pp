@@ -38,19 +38,19 @@ ini_setting { 'random ordering':
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node default {
+#node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  notify { "Hello, my name is ${::hostname}": }
+#  notify { "Hello, my name is ${::hostname}": }
 
-  exec { 'motd 7.2':
-  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-  path => '/usr/local/bin',
-  unless => "/bin/test `grep 'Welcome to ' /etc/motd`",
-  }
+#  exec { 'motd 7.2':
+#  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+#  path => '/usr/local/bin',
+#  unless => "/bin/test `grep 'Welcome to ' /etc/motd`",
+#  }
   
-  include users
-  include skeleton
+#  include users
+#  include skeleton
   
 }
