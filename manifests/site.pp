@@ -44,12 +44,10 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 
-  file { '/etc/motd':
-  ensure  => file,
-  owner   => 'root',
-  group   => 'root',
-  mode    => '0644',
-  content => "Easier to let puppet master make changes on all nodes!\n",
-}
-
+  exec { 'motd 7.2':
+  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+  path => '/usr/local/bin',
+  onlyif => '/bin/test `grep "Welcome to ${::fqdn}!"`',
+  }
+  
 }
