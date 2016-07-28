@@ -2,7 +2,7 @@ class nginx {
   package { 'nginx':
     ensure => present,
   }
-  file {
+  File {
     owner => 'root',
     group => 'root',
     mode => '0664',
