@@ -42,8 +42,8 @@ class nginx  (
 #  }
  
  $docroot = $root? {
-   undef => $default_docroot
-   default => $root
+   undef => $default_docroot,
+   default => $root,
   }
   
   package { $package:
