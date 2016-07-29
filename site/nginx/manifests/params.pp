@@ -22,7 +22,7 @@ class nginx::params {
       $package = 'nginx-service'
       $owner   = 'Administrator'
       $group   = 'Administrators'
-      $default_docroot = 'C:/ProgramData/nginx/html'}
+      $default_docroot = 'C:/ProgramData/nginx/html'
       $confdir = 'C:/ProgramData/nginx'
       $logdir  = 'C:/ProgramData/nginx/logs'
       $user    = 'nobody'
