@@ -54,7 +54,7 @@ node default {
 #  include skeleton
   $virt_cap = capitalize($::virtual)
   notify { "This host is a virtual ${virt_cap} host.\n": }
-  notify { hiera('message') }
+  notify { hiera('message'): }
 }
 
 
