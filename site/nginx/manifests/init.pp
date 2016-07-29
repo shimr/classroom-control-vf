@@ -1,9 +1,9 @@
 class nginx  (
-  $root = undef,
+#  $root = undef,
   $package = $nginx::params::package,
   $owner   = $nginx::params::owner,
   $group   = $nginx::params::group,
-  $default_docroot = $nginx::params::default_docroot,
+#  $default_docroot = $nginx::params::default_docroot,
   $confdir = $nginx::params::confdir,
   $logdir  = $nginx::params::logdir,
   $user    = $nginx::params::user,
@@ -41,10 +41,10 @@ class nginx  (
 #    }
 #  }
  
- $docroot = $root? {
-   undef => $default_docroot,
-   default => $root,
-  }
+# $docroot = $root? {
+#   undef => $default_docroot,
+#   default => $root,
+#  }
   
   package { $package:
     ensure => present,
