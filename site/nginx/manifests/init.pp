@@ -3,6 +3,7 @@ class nginx  (
   $package = $nginx::params::package,
   $owner   = $nginx::params::owner,
   $group   = $nginx::params::group,
+  $docroot = hiera('nginx::docroot')
 #  $default_docroot = $nginx::params::default_docroot,
   $confdir = $nginx::params::confdir,
   $logdir  = $nginx::params::logdir,
