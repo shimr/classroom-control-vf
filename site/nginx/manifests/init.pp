@@ -4,7 +4,7 @@ class nginx {
       $package = 'nginx'
       $owner   = 'root'
       $group   = 'root'
-      $docroot = '/var/www'
+      if $root {$docroot = $root} else {$docroot = '/var/www'}
       $confdir = '/etc/nginx'
       $logdir  = '/var/log/nginx'
       $user    = 'nginx'
@@ -13,7 +13,7 @@ class nginx {
       $package = 'nginx'
       $owner   = 'root'
       $group   = 'root'
-      $docroot = '/var/www'
+      if $root {$docroot = $root} else {$docroot = '/var/www'}
       $confdir = '/etc/nginx'
       $logdir  = '/var/log/nginx'
       $user    = 'www-data'
@@ -22,7 +22,7 @@ class nginx {
       $package = 'nginx-service'
       $owner   = 'Administrator'
       $group   = 'Administrators'
-      $docroot = 'C:/ProgramData/nginx/html'
+      if $root {$docroot = $root} else {$docroot = 'C:/ProgramData/nginx/html'}
       $confdir = 'C:/ProgramData/nginx'
       $logdir  = 'C:/ProgramData/nginx/logs'
       $user    = 'nobody'
